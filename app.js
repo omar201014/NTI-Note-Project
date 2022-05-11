@@ -64,5 +64,4 @@ yargs.command({
     }
 })
 
-
 yargs.parse();

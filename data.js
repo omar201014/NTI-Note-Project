@@ -1,5 +1,5 @@
 // logic  add/remove/list/read //
-const fs = require('fs');
+const fs = require('fs');  // require the filesystem module //
 // add a new note //
 const addNote = (title, body) => {
     const notes = loadNotes();
@@ -15,7 +15,7 @@ const addNote = (title, body) => {
         saveNotes(notes);
         console.log('Note added successfully');
     } 
-    // if the note is found //
+    // else if the note is found //
     else {
         console.log('Note title taken');
     }
@@ -51,7 +51,7 @@ const readNote = (title) => {
 const listNotes = () => {
     const notes = loadNotes();
     notes.forEach((note ,ind ,arr) => {
-        console.log(`Title: ${note.title}`);
+        console.log(`Title: ${note.title}`); 
         console.table(arr);
     });    
 }
